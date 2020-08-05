@@ -17,17 +17,17 @@ def merge(A, B):
     
     return C
 
-def mergsort(A):
+def mergesort(A):
     n = len(A)
     if n < 2:
         return A[:]
     
-    left = mergsort(A[:n // 2])
-    right = mergsort(A[n // 2:])
+    left = mergesort(A[:n // 2])
+    right = mergesort(A[n // 2:])
 
     return merge(left, right)
 
 if __name__ == '__main__':
     a = [7, 6, 8, 5, 2, 1, 3, 4, 0, 9, 10]
     print(a)
-    print(mergsort(a))
+    print(mergesort(a))
